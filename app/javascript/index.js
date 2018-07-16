@@ -2,7 +2,6 @@ import $ from 'jquery'
 global.$ = $
 global.jQuery = $
 
-import 'popper'
 import 'bootstrap'
 import '../stylesheets/vendor.scss'
 
