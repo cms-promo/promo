@@ -15,5 +15,14 @@
     "url": "https://gitlab.com/steamcomputing/promo/issues"
   },
   "homepage": "https://gitlab.com/steamcomputing/promo",
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.1.0",
+    "animate.css": "^3.6.1",
+    "aos": "^2.3.3",
+    "bootstrap": "^4.1.2",
+    "jquery": "^3.3.1",
+    "rails-ujs": "^5.2.0",
+    "simple-line-icons": "^2.4.1",
+    "turbolinks": "^5.1.1"
+  }
 }
