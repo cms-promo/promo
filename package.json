@@ -2,7 +2,7 @@
   "name": "promo",
   "version": "1.0.0",
   "description": "Promo",
-  "main": "lib/assets/index.js",
+  "main": "app/javascript/index.js",
   "private": true,
   "scripts": {},
   "repository": {
