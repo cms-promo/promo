@@ -1,0 +1,19 @@
+{
+  "name": "promo",
+  "version": "1.0.0",
+  "description": "Promo",
+  "main": "lib/assets/index.js",
+  "private": true,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com:steamcomputing/promo.git"
+  },
+  "author": "Fox Chao",
+  "license": "FOX",
+  "bugs": {
+    "url": "https://gitlab.com/steamcomputing/promo/issues"
+  },
+  "homepage": "https://gitlab.com/steamcomputing/promo",
+  "dependencies": {}
+}
