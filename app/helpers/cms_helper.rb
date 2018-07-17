@@ -18,13 +18,13 @@ module CmsHelper
   end
 
   # append css of @cms_page's layout to the whole page
-  def cms_append_css
-    content_for :cms_css, "<link href='#{ comfy_cms_render_css_path @cms_page.site.id, @cms_page.layout.identifier }' rel='stylesheet'>".html_safe
+  def append_cms_css
+    content_for :cms_assets, "<link href='#{ comfy_cms_render_css_path @cms_page.site.id, @cms_page.layout.identifier }' rel='stylesheet'>".html_safe
   end
 
   # append js of @cms_page's layout to the whole page
-  def cms_append_js
-    content_for :cms_js,  "<link href='#{ comfy_cms_render_js_path  @cms_page.site.id, @cms_page.layout.identifier }' rel='stylesheet'>".html_safe
+  def append_cms_js
+    content_for :cms_assets, "<link href='#{ comfy_cms_render_js_path  @cms_page.site.id, @cms_page.layout.identifier }' rel='stylesheet'>".html_safe
   end
 
   def cms_slug
