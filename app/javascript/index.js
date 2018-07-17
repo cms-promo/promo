@@ -3,7 +3,7 @@ global.$ = $
 global.jQuery = $
 
 import 'bootstrap'
-import '../stylesheets/vendor.scss'
+import 'stylesheets/vendor.scss'
 
 import Rails from 'rails-ujs'
 global.Rails = Rails
