@@ -12,6 +12,8 @@ import Turbolinks from 'turbolinks'
 global.Turbolinks = Turbolinks
 
 import AOS from 'aos'
+global.AOS = AOS
+
 import 'aos/dist/aos.css'
 
 import 'animate.css'
