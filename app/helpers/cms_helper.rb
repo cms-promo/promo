@@ -24,7 +24,7 @@ module CmsHelper
 
   # append js of @cms_page's layout to the whole page
   def append_cms_js
-    content_for :cms_assets, "<link href='#{ comfy_cms_render_js_path  @cms_page.site.id, @cms_page.layout.identifier }' rel='stylesheet'>".html_safe
+    content_for :cms_assets, "<script src='#{ comfy_cms_render_js_path @cms_page.site.id, @cms_page.layout.identifier }' defer='defer'>".html_safe
   end
 
   def cms_slug
