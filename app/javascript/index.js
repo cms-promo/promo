@@ -1,5 +1,5 @@
 import './base'
 import './animation'
 import './bootstrap'
-import './han'
 import './fonts'
+import './han'
