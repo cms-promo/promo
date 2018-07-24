@@ -16,4 +16,7 @@ import AOS from 'aos'
 global.AOS = AOS
 
 import 'animate.css'
+
+import './han.js'
 import 'font-awesome/scss/font-awesome-han.scss';
+import 'simple-line-icons/scss/simple-line-icons.scss'
