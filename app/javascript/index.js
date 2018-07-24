@@ -8,13 +8,12 @@ global.Rails = Rails
 import Turbolinks from 'turbolinks'
 global.Turbolinks = Turbolinks
 
-import 'bootstrap'
 import './stylesheets/vendor.scss'
+import 'bootstrap'
 
+import 'aos/dist/aos.css'
 import AOS from 'aos'
 global.AOS = AOS
 
-import 'aos/dist/aos.css'
 import 'animate.css'
 import 'font-awesome/scss/font-awesome-han.scss';
-import 'simple-line-icons/scss/simple-line-icons.scss'
