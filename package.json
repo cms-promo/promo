@@ -2,7 +2,7 @@
   "name": "promo",
   "version": "1.0.0",
   "description": "Promo",
-  "main": "app/javascript/index.js",
+  "main": "js/all.js",
   "private": true,
   "scripts": {},
   "repository": {
