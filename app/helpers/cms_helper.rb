@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 module CmsHelper
+  def render_cms_path(path)
+    previous = @cms_page
+    if @cms_page = Comfy::Cms::Page.find_by_full_path(Pathname(previous.full_path).join(path).to_s)
+      html = ERB.new(@cms_page.content_cache).result(binding).html_safe
+    end
+    @cms_page = previous
+
+    return html
+  end
+
   def render_content_cache
     return ERB.new(@cms_page.content_cache).result(binding).html_safe
   end
