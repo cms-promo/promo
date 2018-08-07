@@ -1,3 +1,5 @@
+import 'animate.css'
+
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 global.AOS = AOS
@@ -11,9 +13,7 @@ AOS.init({
 
 ------------------------------------------------------------------------------------------------------------------
 
-//FIXME 
-import 'animate.css'
-
+//FIXME
 import 'promo/css/animated-aos.css'
 AOS.init({
   // Global settings
