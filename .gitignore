@@ -27,6 +27,7 @@
 /public/packs
 /public/packs-test
 /node_modules
+Gemfile.lock
 yarn.lock
 yarn-debug.log*
 .yarn-integrity
