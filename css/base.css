@@ -5,3 +5,9 @@
 .display-false {
   display: none;
 }
+
+.img-contained {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
