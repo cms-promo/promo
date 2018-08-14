@@ -7,3 +7,5 @@ global.Rails = Rails
 
 import Turbolinks from 'turbolinks'
 global.Turbolinks = Turbolinks
+
+import '../css/base.css'
