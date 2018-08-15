@@ -1,0 +1,4 @@
+.page-header
+  h2
+    = t(id ? 'Edit ' : 'New ') + model_name.human
+    = " [#{id}]" if id

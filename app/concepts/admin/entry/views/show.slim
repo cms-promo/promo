@@ -1,0 +1,11 @@
+.form-actions.row.bg-light
+  .col-lg-8.offset-lg-4
+    .form-group.row.mb-0
+      .col-sm-10.offset-sm-2
+        => link_to 'Edit', admin_edit_path(id), class: 'btn btn-warning ml-sm-1'
+        a.btn.btn-link onClick='history.back(); return true;' Back
+
+dl.dl-horizontal
+  - model.attributes.each do |key, value|
+    dt.text-info = key
+    dd = sanitize (value || 'NIL').to_s
