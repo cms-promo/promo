@@ -1,4 +1,5 @@
 class Admin::Form::Cell < Cell::Concept
+  view_paths << "#{Promo::Engine.root}/app/concepts"
   include ActionView::Helpers::TranslationHelper
 
   property :object
