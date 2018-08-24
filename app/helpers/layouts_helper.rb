@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Used to achieve nested layouts without content_for. This helper relies on
 # Rails internals, so beware that it make break with future major versions
 # of Rails. Inspired by http://stackoverflow.com/a/18214036

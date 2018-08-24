@@ -1,0 +1,3 @@
+.btn-group.btn-group-sm
+  = link_to "Edit",    admin_edit_path(@object.id), class: 'btn btn-default'
+  = link_to "Del", admin_show_path(@object.id), method: :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger'

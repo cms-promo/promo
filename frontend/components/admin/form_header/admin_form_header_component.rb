@@ -8,5 +8,4 @@ module AdminFormHeaderComponent
   def model_name
     @object.model_name
   end
-
 end

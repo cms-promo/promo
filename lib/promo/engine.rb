@@ -1,21 +1,23 @@
+# frozen_string_literal: true
+
 module Promo
   class Engine < ::Rails::Engine
     config.after_initialize do |app|
-      app.config.komponent.component_paths.append(Promo::Engine.root.join("frontend/components"))
+      app.config.komponent.component_paths.append(Promo::Engine.root.join('frontend/components'))
     end
 
-    initializer "promo.action_dispatch" do |app|
+    initializer 'promo.action_dispatch' do |_app|
       ActiveSupport.on_load :action_controller do
-        ActionController::Base.prepend_view_path Promo::Engine.root.join("frontend")
+        ActionController::Base.prepend_view_path Promo::Engine.root.join('frontend')
       end
     end
 
     initializer 'promo.autoload', before: :set_autoload_paths do |app|
-      app.config.autoload_paths << Promo::Engine.root.join("frontend")
+      app.config.autoload_paths << Promo::Engine.root.join('frontend')
     end
   end
 
-private
+  private
 
   def self.root
     Pathname.new(File.dirname(__dir__))

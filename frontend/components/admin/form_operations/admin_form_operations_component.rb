@@ -12,5 +12,4 @@ module AdminFormOperationsComponent
   def admin_models_path
     send "admin_#{model_name.name.tableize}_path"
   end
-
 end
