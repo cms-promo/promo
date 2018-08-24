@@ -18,10 +18,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 5.2.0'
   s.add_dependency 'comfortable_mexican_sofa', '~> 2.0.0'
+  s.add_dependency "komponent"
   s.add_dependency 'slim-rails'
-  s.add_dependency "cells"
-  s.add_dependency "cells-rails"
-  s.add_dependency "cells-slim"
 
   s.add_development_dependency "byebug"
 end

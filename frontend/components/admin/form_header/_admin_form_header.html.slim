@@ -1,0 +1,4 @@
+.page-header
+  h2
+    = t(@object.id ? 'Edit ' : 'New ') + model_name.human
+    = " [#{@object.id}]" if @object.id
