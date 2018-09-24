@@ -6,6 +6,7 @@
         a.btn.btn-link onClick='history.back(); return true;' Back
 
 dl.dl-horizontal
+  - klass = @object.class
   - @object.attributes.each do |key, value|
-    dt.text-info = key
+    dt.text-info = klass.human_attribute_name key
     dd = sanitize (value || 'NIL').to_s
