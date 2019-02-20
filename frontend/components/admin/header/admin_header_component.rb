@@ -14,6 +14,6 @@ module AdminHeaderComponent
   end
 
   def admin_new_path
-    send "new_admin_#{model_name.name.downcase}_path"
+    send "new_admin_#{model_name.name.underscore}_path"
   end
 end
