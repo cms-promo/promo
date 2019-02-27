@@ -18,9 +18,9 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'Rakefile', 'README.md']
 
-  s.add_dependency 'comfortable_mexican_sofa', '~> 2.0.0'
+  s.add_dependency 'comfortable_mexican_sofa', '>= 2.0.0'
   s.add_dependency 'komponent'
-  s.add_dependency 'rails', '~> 5.2.0'
+  s.add_dependency 'rails'
   s.add_dependency 'slim-rails'
 
   s.add_development_dependency 'byebug'
