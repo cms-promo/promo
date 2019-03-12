@@ -16,4 +16,3 @@ module BootstrapFormHelper
     end
   end
 end
-

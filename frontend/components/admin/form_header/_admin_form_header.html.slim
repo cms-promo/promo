@@ -1,4 +1,7 @@
-.page-header
-  h2
-    = t(@object.id ? 'Edit ' : 'New ') + model_name.human
-    = " [#{@object.id}]" if @object.id
+h3
+  => t(@object.id ? 'edit' : 'new')
+  - if @object.id
+    | [
+    = @object.id
+    = ": #{@object.slug}"if @object[:slug].present?
+    | ]
