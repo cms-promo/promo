@@ -1,0 +1,17 @@
+li.nav-item
+  / active
+  - if tab_pairs.keys.map { |path| is_active_link? path }.inject(:|)
+    a.nav-link
+      = t(tab_name)
+    ul.navigation
+      - tab_pairs.map do |path, name|
+        li.nav-item
+          = active_link_to name, path, class: 'nav-link'
+  / not active
+  - else
+    - cache ["admin_#{tab_name}_dropdown", tab_pairs.values]
+      a.nav-link.dropdown-toggle(href='' data-toggle="dropdown")
+        = t(tab_name)
+      div.dropdown-menu
+        - tab_pairs.map do |path, name|
+          = link_to name, path, class: 'dropdown-item'

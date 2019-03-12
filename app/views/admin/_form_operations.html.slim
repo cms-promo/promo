@@ -1,0 +1,9 @@
+/ locals: form
+
+- admin_models_path = send "admin_#{form.object.model_name.name.tableize}_path"
+
+.form-actions.row.bg-light
+  .col-4.offset-2
+    a.btn.btn-link href=(admin_models_path) = t('cancel')
+  .col-6
+    = form.submit class: 'btn btn-warning ml-sm-1', name: 'commit'

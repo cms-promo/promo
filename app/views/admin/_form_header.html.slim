@@ -1,0 +1,9 @@
+/ locals: object
+
+h3
+  => t(object.id ? 'edit' : 'new')
+  - if object.id
+    | [
+    = object.id
+    = ": #{object.slug}"if object[:slug].present?
+    | ]

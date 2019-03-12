@@ -1,3 +1,5 @@
+/ locals: form
+
 .btn-group.btn-group-sm
-  = @form.submit t('go'), class: 'btn btn-primary'
+  = form.submit t('go'), class: 'btn btn-primary'
   = link_to t('clear'), nil, class: 'btn btn-default'
