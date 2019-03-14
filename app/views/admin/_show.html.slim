@@ -1,18 +1,30 @@
 / locals: object
 
+- admin_edit_path = send "edit_admin_#{object.model_name.name.underscore}_path", object.id
 .form-actions.row.bg-light
   .col-lg-8.offset-lg-4
     .form-group.row.mb-0
       .col-sm-10.offset-sm-2
-        => link_to 'Edit', admin_edit_path(object.id), class: 'btn btn-warning ml-sm-1'
+        => link_to 'Edit', admin_edit_path, class: 'btn btn-warning ml-sm-1'
         a.btn.btn-link onClick='history.back(); return true;' Back
-
-- if object[:lines].present? && object.lines.count.positive?
-  - object.lines.map do |line|
-    table
 
 dl.dl-horizontal
   - klass = object.class
   - object.attributes.each do |key, value|
     dt.text-info = klass.human_attribute_name key
     dd = sanitize (value || 'NIL').to_s
+
+- if object.respond_to?(:lines) && object.lines.count.positive?
+  p fdasfdsf sdf
+  .table-responsive
+    table.table.table-hover.table-bordered.table-condensed.table-striped.table-fixed-head
+      thead
+        tr
+          - object.lines.first.attributes.keys.each do |attr|
+            th(nowrap) = object.class.human_attribute_name(attr)
+      tbody
+        - object.lines.map do |line|
+          tr
+            - line.attributes.values.each do |value|
+              td = value
+

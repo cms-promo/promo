@@ -1,3 +1,5 @@
+/ locals: tab_name, tab_pairs
+
 li.nav-item
   / active
   - if tab_pairs.keys.map { |path| is_active_link? path }.inject(:|)
