@@ -1,6 +1,9 @@
 / locals: objects
 
-- cache ['admin_pager', objects]
-  = page_entries_info objects
-  br /
-  = paginate objects, theme: 'admin'
+- unless content_for? :pager
+  - content_for :pager
+    = page_entries_info objects
+    br /
+    = paginate objects, theme: 'admin'
+
+= yield :pager
