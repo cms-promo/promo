@@ -1,8 +1,9 @@
-/ locals: klass
+/ locals: klass, disable_new
 
 - cache "admin_header_#{klass.name}"
   - model_name = klass.model_name
-  - admin_new_path = send "new_admin_#{model_name.name.underscore}_path"
-  .page-header(data-controller="admin-header")
-    = link_to t('new') + model_name.human, admin_new_path, class: 'btn btn-secondary btn-warning float-right'
-    h2 = link_to model_name.human, admin_new_path
+  - unless (defined?(disable_new) && disable_new)
+    - admin_new_path = send "new_admin_#{model_name.name.underscore}_path"
+    .page-header(data-controller="admin-header")
+      = link_to t('new') + model_name.human, admin_new_path, class: 'btn btn-secondary btn-warning float-right'
+      h2 = link_to model_name.human, admin_new_path

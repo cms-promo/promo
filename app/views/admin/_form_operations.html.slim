@@ -6,4 +6,4 @@
   .col-4.offset-2
     a.btn.btn-link href=(admin_models_path) = t('cancel')
   .col-6
-    = form.submit class: 'btn btn-warning ml-sm-1', name: 'commit'
+    = form.submit class: 'btn btn-warning ml-sm-1', data: {disable_with: false}
