@@ -19,8 +19,10 @@ module CmsHelper
     # prevent @cms_page from being changed
     previous = @cms_page
     html = @cms_page.children.order(:position).map do |cms_page|
-      @cms_page = cms_page
-      ERB.new(cms_page.content_cache).result(binding)
+      if cms_page.is_published?
+        @cms_page = cms_page
+        ERB.new(cms_page.content_cache).result(binding)
+      end
     end.join('')
     @cms_page = previous
 
@@ -45,3 +47,4 @@ module CmsHelper
     @cms_page.label
   end
 end
+
