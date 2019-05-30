@@ -1,9 +1,10 @@
 / locals: object
 
 - klass_name = object.model_name.name.underscore
-- admin_edit_path = send "edit_admin_#{klass_name}_path", object.id
+- path_name = "edit_admin_#{klass_name}_path".to_sym
+- admin_edit_path = respond_to?(path_name) ? send(path_name, object.id) : nil
 - admin_show_path = send "admin_#{klass_name}_path", object.id
 
 .btn-group.btn-group-sm
-  = link_to t('edit'), admin_edit_path, class: 'btn btn-default'
+  = link_to t('edit'),   admin_edit_path, class: 'btn btn-default' if admin_edit_path.present?
   = link_to t('delete'), admin_show_path, method: :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger'
