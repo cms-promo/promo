@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AdminHelper
   # Customized wrapper around ComfortableMexicanSofa::FormBuilder
   def admin_form_with(**options, &block)

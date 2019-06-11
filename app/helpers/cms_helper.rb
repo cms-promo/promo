@@ -3,7 +3,7 @@
 module CmsHelper
   def render_cms_path(path)
     previous = @cms_page
-    if @cms_page = Comfy::Cms::Page.find_by(full_path: Pathname(previous.full_path).join(path).to_s)
+    if (@cms_page = Comfy::Cms::Page.find_by(full_path: Pathname(previous.full_path).join(path).to_s))
       html = ERB.new(@cms_page.content_cache).result(binding).html_safe
     end
     @cms_page = previous
@@ -47,4 +47,3 @@ module CmsHelper
     @cms_page.label
   end
 end
-
