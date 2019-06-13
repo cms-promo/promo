@@ -24,7 +24,6 @@
     "font-awesome": "https://github.com/cms-promo/Font-Awesome.git#fa-4",
     "han-css": "^3.3.0",
     "jquery": "^3.3.1",
-    "jquery-table-fixed-head": "https://github.com/cms-promo/jquery-table-fixed-head.git",
     "popper.js": "^1.14.3",
     "rails-ujs": "^5.2.0",
     "simple-line-icons": "https://github.com/cms-promo/simple-line-icons.git",
